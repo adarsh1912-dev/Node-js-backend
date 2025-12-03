@@ -1,0 +1,7 @@
+require is funciton which takes a string parameter (path to our module) and returns whatever is assigned to module.exports in the required file.
+
+Note: if we require any module it will execute the code written in that module.
+
+How require function works? 
+
+require(module.js) -> import the module.exports object into our current module.

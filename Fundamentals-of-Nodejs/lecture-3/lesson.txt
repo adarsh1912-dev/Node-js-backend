@@ -1,0 +1,10 @@
+Difference between module.exports and exports;
+
+module.exports is the actual object that gets returned when a module is required.
+exports is just a shortcut (reference) to module.exports.
+
+At the start of every Node module, Node does something like:
+
+let module = { exports: {} };
+let exports = module.exports;
+

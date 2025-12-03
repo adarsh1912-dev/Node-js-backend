@@ -1,0 +1,65 @@
+Module Wrapper Function :
+
+In Node.js, every file is treated as a module, and before your code runs, Node automatically wraps it inside a Module Wrapper Function. This wrapper gives every module its own private scope and provides useful variables like require, module, exports, etc.
+
+🧠 What is the Module Wrapper Function?
+
+Node internally wraps each module file with this function:
+
+(function (exports, require, module, __filename, __dirname) {
+  // Your actual code lives here
+});
+
+
+So if you have a file index.js:
+
+console.log("Hello");
+
+
+Node actually converts it to something like:
+
+(function (exports, require, module, __filename, __dirname) {
+  console.log("Hello");
+});
+
+
+Then it immediately invokes it.
+
+🎯 Why does Node use this wrapper?
+Reason	Explanation
+Private scope	Variables inside a module don’t leak into global scope
+Provides module system	Gives access to exports, require, module
+File metadata	Adds __filename and __dirname
+CommonJS module system	Enables code exports and imports
+
+No variable conflicts like in browser global scripts.
+
+~ __filename and __ __dirname: 
+
+In Node.js, __filename and __dirname are special variables available inside every module (file). They are provided by the module wrapper function, not part of JavaScript itself.
+
+📌 __filename
+
+👉 Returns the absolute path of the current file, including its name.
+
+Example
+console.log(__filename);
+
+
+Output example:
+
+/home/user/project/index.js
+
+
+
+📂 __dirname
+
+👉 Returns the directory path of the current file (without the file name).
+
+Example
+console.log(__dirname);
+
+
+Output:
+
+/home/user/project

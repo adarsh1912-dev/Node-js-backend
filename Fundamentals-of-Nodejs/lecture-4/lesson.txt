@@ -1,0 +1,17 @@
+Learning Module Object.
+
+module.children -> imported modules;
+
+module.isPreloading -> we can preload a module by running node --require ${module.path} ./app.js
+
+module.parent -> In Node.js, every file is treated as a module.
+When you require() one module from another, the parent module is the file that performed the require.
+
+So:
+
+module → the current module object
+
+module.parent → the module that required (imported) the current module
+
+module.paths -> In Node.js, module.paths is an array that lists all the directories where Node will look for modules when you call require().
+
