@@ -1,0 +1,13 @@
+to make any js script as ES6 module we first crate a package.json file and set type to module
+
+{
+    "type" : "module"
+}
+
+in Es6 modules require, exports, __dirname, __filename will not work
+
+in Es6 modules no local scope will be created , Module scope is actually created , Module scope is not global scope.
+
+-> By default strict mode will be enabled in module system
+
+*Common js doesn't care about extensions.
