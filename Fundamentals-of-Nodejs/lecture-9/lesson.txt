@@ -1,0 +1,19 @@
+Difference between Commonjs and Modules
+
+1 -> common js Modules loads synchronously but in es6 modules it happens asynchronously.
+
+2-> File extenstion is optional in commonjs but not in es6 modules, you must give extension as .js .
+
+3-> Value of this keyword is different 
+
+-- in cjs this points to module.exports object.
+-- in mjs this is undefined. 
+
+4-> mjs are hoisted but cjs are not.
+
+5-> in mjs we can use await keyword even outside of a async function but not in cjs.(Top level awai is allowed in mjs but not in cjs).
+
+6-> in cjs only one value can be exported (module.exports) object. But in mjs multiple values can be exported.
+
+7-> Strict mode is not enabled by default in cjs but in mjs strict mode is enabled.
+
