@@ -1,0 +1,18 @@
+What is an ArrayBuffer?
+
+An ArrayBuffer is a fixed-length block of memory.
+It represents a generic, raw binary data buffer.
+You cannot read or write directly to an ArrayBuffer; instead, you use a "view" (like TypedArrays or DataView) to interpret the data.
+
+ArrayBuffers -> Array of bytes.
+
+new ArrayBuffer(10) -> to create a buffer of 10 bytes.
+
+ArrayBuffers are not resizeable by default.
+
+Max Size of array buffer can be 2gb.
+
+js has readAsArrayBuffer method to read binary files.
+
+ArrayBuffers in js are garbage collected.
+
