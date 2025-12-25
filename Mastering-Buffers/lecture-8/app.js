@@ -22,5 +22,9 @@ ab[4] = 101;
 //can call toString on buffer with encoding options to get data.
 console.log(`content of array buffer : ${ab.toString()}`);
 
+//Lets study about buffer pool
+//we have Buffer.alloc() and Buffer.allocUnSafe()
+//Buffer.allocUnSafe() allocate memory with some garbage values;
+
 
 

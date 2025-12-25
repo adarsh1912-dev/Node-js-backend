@@ -1,0 +1,11 @@
+To read or write in array buffers we need DataView object.
+
+const a = new ArrayBuffer(10);
+
+const view = new DataView(a);
+
+we have get and set methods in DataView object.
+
+view.setInt8(1, 70); (bit offset, value). 
+
+we can set offset means the array will start from offset.

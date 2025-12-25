@@ -1,0 +1,6 @@
+Learning Fs module of nodejs
+
+->Fs module generally works with binary files
+
+->fs.readFileSync returns buffer 
+->fs.readFile returns undefined

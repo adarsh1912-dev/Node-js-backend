@@ -1,0 +1,21 @@
+Buffer:
+A Buffer in Node.js is a raw binary data storage, similar to an array of bytes. Buffers are used to handle binary data directly, especially when dealing with streams, files, or network operations. Unlike regular JavaScript arrays, Buffers are not resizable and are optimized for performance.
+
+Buffer Pool:
+A buffer pool is an internal memory management technique used by Node.js to efficiently allocate and reuse memory for buffers. Instead of allocating new memory for every buffer, Node.js maintains a pool of pre-allocated memory chunks, reducing the overhead and improving performance for frequent buffer operations.
+
+Buffer.alloc(size[, fill[, encoding]]):
+This method creates a new Buffer of the specified size and initializes it with zeros (or a custom value if provided). It is safe because the memory is cleared before use, preventing accidental exposure of old or sensitive data.
+Example:
+const buf = Buffer.alloc(10); // Creates a buffer of 10 bytes, all set to 0
+
+Buffer.allocUnsafe(size):
+This method creates a new Buffer of the specified size, but the memory is not initialized. The buffer may contain old or sensitive data left in memory. It is faster than Buffer.alloc() but should be used with caution and only when you plan to overwrite the buffer immediately.
+Example:
+const buf = Buffer.allocUnsafe(10); // Creates a buffer of 10 bytes, memory is not cleared
+
+Summary:
+- Use Buffer.alloc() for safety (zero-filled).
+- Use Buffer.allocUnsafe() for performance (not zero-filled, use with care).
+- Buffers are essential for binary data handling in Node.js.
+- Buffer pool improves memory allocation efficiency.
