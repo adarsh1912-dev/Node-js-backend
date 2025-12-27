@@ -1,0 +1,30 @@
+Types of Streams in Node.js
+
+Node.js provides several types of streams to handle reading and writing data efficiently. Streams are objects that let you read data from a source or write data to a destination in a continuous fashion.
+
+1. **Readable Streams**
+	- Used for reading data.
+	- Example: `fs.createReadStream()` for reading files.
+
+2. **Writable Streams**
+	- Used for writing data.
+	- Example: `fs.createWriteStream()` for writing files.
+
+3. **Duplex Streams**
+	- Can be both readable and writable.
+	- Example: TCP sockets (`net.Socket`).
+
+4. **Transform Streams**
+	- Duplex streams that can modify or transform the data as it is read or written.
+	- Example: `zlib.createGzip()` for compressing data.
+
+**Summary Table:**
+
+| Stream Type      | Readable | Writable | Example                  |
+|------------------|----------|----------|--------------------------|
+| Readable         | Yes      | No       | File read stream         |
+| Writable         | No       | Yes      | File write stream        |
+| Duplex           | Yes      | Yes      | TCP socket               |
+| Transform        | Yes      | Yes      | Gzip compression stream  |
+
+Streams are essential for handling large amounts of data efficiently, such as working with files, network communications, or any scenario where data is processed in chunks.
