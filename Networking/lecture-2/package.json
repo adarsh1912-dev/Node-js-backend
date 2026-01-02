@@ -1,0 +1,9 @@
+{
+  "name": "lecture-2",  
+  "version": "1.0.0",
+  "description": "Lecture 2 for Networking course",
+  "type": "module",
+  "dependencies": {
+    "@types/node": "^25.0.3"
+  }
+}
