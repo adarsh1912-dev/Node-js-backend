@@ -2,3 +2,4 @@ learning about internal buffer of readable stream
 
 -> basically readStream contains internal array buffers which stores data in arry buffers to perform read operation, new array buffers are being created and destroyed in the process.
 
+we have readStream.setEncoding() method to set endcoding of buffer 
