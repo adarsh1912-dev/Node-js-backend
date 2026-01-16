@@ -6,6 +6,7 @@ import express from "express";
 const app = express();
 const port = 4000;
 
+//The express.json() method is a built-in middleware function in Express.js. It parses incoming requests with JSON payloads and makes the parsed data available in req.body.
 app.use(express.json());
 
 
