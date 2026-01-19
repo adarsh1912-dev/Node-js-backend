@@ -1,6 +1,9 @@
 import { createReadStream, createWriteStream, read } from "node:fs";
-import net from "node:net";
+import net from "node:net"; // net module is used for creating tcp servers
 
+// here we are taking std input from terminal and reading it. 
+// input will start with a number which will point the client whom we want to send data and rest will be the message.
+// if we get the number associated with client to send message then we will send the message to that particular client otherwise we will brodcast it every client connected to server.
 process.stdin.on("data", (input) => {
   const inputStr = input.toString();
   const [clientIndex] = inputStr.split(" ");

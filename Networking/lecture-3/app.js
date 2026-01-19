@@ -3,11 +3,14 @@
 import net from "node:net"
 
 
-const server = net.createServer();
+const server = net.createServer(); // it will return a server object.
+// server is just an event emitter object.
 
 
 //start listening
 server.listen(4000, '0.0.0.0');
+
+// this event will be triggered when server will start listening for requests
 
 server.on('listening',() => {
     console.log('server started at port 4000');
@@ -16,6 +19,8 @@ server.on('listening',() => {
 
 // 'connection' event will trigger when the connection will be established.
 // socket is a duplex stream here.
+// node js provides us socket(duplex stream) for sharing data between client and server
+
 server.on('connection', (socket) => {
     // client connection message
     console.log("Client Connected");

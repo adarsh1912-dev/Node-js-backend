@@ -2,6 +2,8 @@
 
 import net from 'net';
 
+
+// this will return a socket object which is simply a duplex stream.
 const client = net.createConnection({ port: 4000, host: '192.168.0.9' }, () => { // returns a duplex stream
 	console.log('Connected to server');
 	client.write('Hello from TCP client!');

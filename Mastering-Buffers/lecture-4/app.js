@@ -1,5 +1,6 @@
+// creating an ArrayBuffer of 4 bytes
 const a = new ArrayBuffer(4);
-const view = new DataView(a);
+const view = new DataView(a); // creating a DataView object for reading or writing in ArrayBuffer
 
 view.setInt8(0,0x12);
 view.setInt8(1,0x13);
