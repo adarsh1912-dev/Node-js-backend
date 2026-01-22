@@ -5,7 +5,7 @@ const app = express();
 
 // Enabling CORS
 // enabling cors is important otherwise the browser will block the res from server due to security reasons 
-// we sare 
+
 // res.set() method updates the res object with given headers and send it back to browser
 app.use((req, res, next) => {
   res.set("Access-Control-Allow-Origin", "*");
@@ -21,6 +21,7 @@ app.use((req, res, next) => {
 app.use((req, res, next) => {
   // running a custom logic before serving files 
   // in this case we are setting headers
+  // in express we gets req.query object which contains parsed querry params.
 
   if (req.query.action === "download") {
     res.set("Content-Disposition", "attachment");
