@@ -14,7 +14,7 @@ app.use((req, res, next) => {
 
 // Serving Files
 
-// when we click a button with action set to download the browser will send req to server with a querry action === 'download' and we are handling that event in the middleware.
+// when we click a button with action( action is query parameter here) set to download the browser will send req to server with a querry action === 'download' and we are handling that event in the middleware.
 
 // When you click a "Download" button or link in your frontend, it sends a request to the server with the query parameter action=download (for example: /filename.txt?action=download).
 

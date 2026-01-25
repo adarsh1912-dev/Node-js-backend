@@ -16,7 +16,8 @@ try {
 } catch (error) {
    console.log(error); 
 }
-
+   ^
+   |
 this piece of code will throw an error because readFile can only read instances of Buffer, ArrayBuffer , string or DataView.
 
 
@@ -39,7 +40,7 @@ readStream.on('data',(chunkBuffer) => {
 */
 
 
-//we can also adjust the bytelength of out buffer stream by passing an object {highWaterMark : (size of Abuffer)} in createReadStream method
+//we can also adjust the bytelength of our buffer stream by passing an object {highWaterMark : (size of Abuffer)} in createReadStream method
 
 /*
 const readStream = fs.createReadStream('/home/adarsh-dev/Movies/Bollywood/Saiyaara.2025.720p.V2.HDTC.Hindi.ORG.2.0.x264.mkv', { highWaterMark : 100 * 1024 * 1024});
