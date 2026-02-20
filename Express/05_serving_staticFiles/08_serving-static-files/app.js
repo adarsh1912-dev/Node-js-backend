@@ -1,4 +1,4 @@
-// we will learn about serving static files -> using express.static()[for serving a dir] and res.sendFile()[for serving a file] method;
+// we will learn about serving static files -> using express.static() builtin middleware [for serving a dir] and res.sendFile()[for serving a file] method;
 import express from "express";
 import { open } from "fs/promises";
 
