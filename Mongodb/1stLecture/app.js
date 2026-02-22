@@ -9,12 +9,16 @@ await client.connect()
 
 const db = client.db() // returns a db object
 
-const collections = await db.listCollections().toArray() // will return a promise which resolves with a list of all collections of db
+// const collections = await db.listCollections().toArray() // will return a promise which resolves with a list of all collections of db
 
-console.log(collections);
+// console.log(collections);
 
 // creating admin object to get access to whole database;
 
-const admin = client.db.admin(); // returns admin object 
+const admin = client.db().admin(); // returns admin object 
 
 const allDbs = await admin.listDatabases() // returns a promise which will resolve with a list of databases
+
+console.log(allDbs);
+
+client.close(); 
