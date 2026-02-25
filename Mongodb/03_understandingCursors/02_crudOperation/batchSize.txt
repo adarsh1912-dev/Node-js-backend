@@ -1,0 +1,10 @@
+// explain what is batch sizing in mongodb and how it works
+
+// batch size is the number of documents that are returned by the cursor at a time
+
+// max size of batch is 16mb and min size of batch is 1mb
+
+// batch size is set by the driver
+
+it will send 101 documents at a time
+
